@@ -25,14 +25,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     loop {
         // Turn the LED on
         led.set_high()?;
-        info!("LED turned on!");
 
         // Delay for 1000 milliseconds (1 second)
         FreeRtos::delay_ms(1000);
 
         // Turn the LED off
         led.set_low()?;
-        info!("LED turned off!");
 
         // Delay for another 1000 milliseconds (1 second)
         FreeRtos::delay_ms(1000);
